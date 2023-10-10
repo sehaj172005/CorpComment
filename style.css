@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(95, 55, 133, 0.77);
+    
+    
+}
+
+.content__box{
+    background-color: white;
+
+    height: 90vh;
+    width: 600px;
+    margin-top: 5vh;
+    border-radius: 20px;
+}
+
+.content__box__main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 30vh;
+    background-image: url(https://img.freepik.com/free-vector/dark-fibres-texture_1100-94.jpg?w=740&t=st=1695755406~exp=1695756006~hmac=122463df55d8a63940e93220235ef956b6ee6ff238bb8c3f87d1e5cc884d718e);
+    border-radius: 20px;
+    
+}
+
+.feedback__input{
+    background-color: rgba(87, 86, 86, 0.618);
+    width: 25vw;
+    height: 15vh;
+    border-radius: 10px;
+    margin-top: 2vh;
+
+
+
+}
+
+
+.feedback__input input{
+    /* background-color: rgba(0, 0, 0, 0.243); */
+    background: transparent;
+    border: none;
+    width: 25vw;
+    height: 5vh;
+
+  
+
+
+    
+    
+}
+
+/* .feedback__input__words{
+    margin-top: 40px;
+    
+} */
+
+.content__box__bottom{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* overflow: hidden; */
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 20px;
+    /* padding-left: 150px; */
+    /* margin-top: 40px */
+    /* align-items: center; */
+    
+}
+
+form{
+    background-color: rgba(39, 39, 39, 0.484);
+    width: 350px;
+    height: 15vh;
+    border-radius: 10px;
+    margin-top: 2vh;
+    
+
+    
+
+    
+
+
+}
+
+form textarea{
+    all: unset;
+}
+
+form textarea{
+    background: transparent;
+    border: none;
+    width: 350px;
+    height: 8vh;
+    overflow: hidden;
+
+
+    
+    
+
+    
+}
+
+.feedback__input__words{
+    color: rgb(97, 97, 97);
+}
+
+
+.form__active{
+    border: 1px solid green;
+}
+
+.form__inactive{
+
+    border : 1px solid red
+
+}
+
+.submit__btn{
+    
+    
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    backface-visibility: hidden;
+    text-transform: uppercase;
+    
+}
+
+
+.hashtags{
+    position: absolute;
+    top: 10%;
+    right: 100px ;
+    list-style: none;
+    outline: none;
+    
+
+}
+
+.hashtag{
+
+
+    margin: 6px;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    border: none;
+    cursor: pointer;
+     background-color: rgba(255, 255, 255, 0.06);
+
+}
+
+
+.feedback {
+    display: grid;
+    grid-template-columns: 40px 85px 9fr 1fr;
+    padding-left: 20px;
+    border-bottom: 1px solid lightgray;
+    height: 30%;
+    align-items: center;
+    /* overflow: scroll; */
+}
+
+
+
+
+.upvote{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: lightgrey;
+}
+
+.upvote__icon{
+    margin-bottom: 5px;
+}
+
+.feedback__badge{
+    height: 40px;
+    width: 30px;
+    background-color: rgb(167, 112, 167);
+    display: flex;
+    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+
+}
+
+
+
+
+.feedbacks {
+    height: 450px;
+    /* width: 70%; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* background-color: #F3F6F8; */
+    background-color: #f7f8f9;
+
+}
+
+.upvote__icon:disabled {
+    display: none;
+}
+
+/* .upvote:disabled {
+    pointer-events: none;
+} */
+
+
+
+
+
+
+.feedback__company{
+    text-transform: uppercase;
+    font-size : 13px;
+    color : rgba(0, 0, 0, 0.725)
+}
+
+/* HOVER */
+
+.feedback:hover  .upvote ,
+.feedback:hover .feedback__badge,
+.feedback:hover  .feedback__content,
+.feedback:hover  .feedback__date{
+    transform: translateX(3px);
+    transition: all 0.3s;
+}
+
+.feedback:hover{
+    border-bottom: 1px solid  black;
+}
+
+.upvote:hover .upvote__icon{
+    cursor: pointer ;
+    color: rgba(0, 0, 0, 0.737)
+}
+
+.feedback__text {
+    overflow: auto; /* Add this property to enable scrolling */
+    max-height: 100px; /* Set a maximum height for the scrollable area */
+
+}
+
+
+.spinner{
+
+    position: absolute;
+     font-size: 60px;
+    color : darkgray;
+    top: 50% ;
+    left: 47%;
+}
+
+.mobile__heading{
+    display: none;
+}
+
+.feedback__expand{
+
+    height: 35%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 1000px) {
+    
+    .hashtags {
+        display: none;
+    }
+}
+
+@media(max-width : 769px ){
+    .form {
+        width: 300px;
+    }
+}
+
+@media(max-width : 650px){
+    .content__box{
+        width: 100%;
+        margin-top: 0;
+        height: 100vh;
+        border-radius: 0;
+    }
+}
+
+@media (max-width : 370px){
+
+    .mobile__heading{
+        display: block;
+        font-size: 30px;
+    }
+   
+    
+    .content__box__main h1{
+        display: none;
+    }
+
+    .feedback{
+        padding-left: 0;
+        
+        
+        
+        
+    }
+
+   
+    
+    .feedback__text{
+
+        height: 500px;
+        overflow: hidden;
+
+    }
+
+    
+        
+    
+
+   
+    
+}
+
+
+
